@@ -1,7 +1,7 @@
 # Домашнее задание №3
 ## Переменные и типы данных в Java
 Скриншот компиляции и работы программы:
-![Скриншот1](https://github.com/SergeyVolko/JavaDeveloper/blob/master/homework2/src/screen/%D0%94%D0%B7%E2%84%962.png?raw=true)<br><br>
+![Скриншот1](https://github.com/SergeyVolko/JavaDeveloper/blob/master/homework3/src/screen/%D0%94%D0%97%E2%84%963.png?raw=true)<br><br>
 Исходный код класса WorkShop:
 ```java
 import java.util.Arrays;
