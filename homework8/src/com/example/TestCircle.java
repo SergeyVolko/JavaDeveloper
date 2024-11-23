@@ -44,20 +44,27 @@ public class TestCircle {
         }
     }
 
-    private void testCreateRadiusLessZero() {
+    private void testCreateRadiusLessZero(double radius) {
         try {
-            Circle circle = new Circle(-1);
-            System.out.println("testCreateRadiusLessZero: FAILURE");
+            Circle circle = new Circle(radius);
+            if (radius < 0) {
+                System.out.println("testCreateRadiusLessZero: FAILURE");
+                return;
+            }
+            System.out.println("testCreateRadiusLessZero: OK");
         } catch (RuntimeException e) {
             System.out.println("testCreateRadiusLessZero: OK");
         }
     }
 
-    private void testSetRadiusLessZero() {
+    private void testSetRadiusLessZero(double radius, Circle circle) {
         try {
-            Circle circle = new Circle(1);
-            circle.setRadius(-1);
-            System.out.println("testSetRadiusLessZero: FAILURE");
+            circle.setRadius(radius);
+            if (radius < 0) {
+                System.out.println("testSetRadiusLessZero: FAILURE");
+                return;
+            }
+            System.out.println("testSetRadiusLessZero: OK");
         } catch (RuntimeException e) {
             System.out.println("testSetRadiusLessZero: OK");
         }
@@ -67,7 +74,10 @@ public class TestCircle {
         testCreateCircle();
         testSetRadius();
         testGetArea();
-        testCreateRadiusLessZero();
-        testSetRadiusLessZero();
+        testCreateRadiusLessZero(-1);
+        testCreateRadiusLessZero(1);
+        Circle circle = new Circle(1);
+        testSetRadiusLessZero(-1, circle);
+        testSetRadiusLessZero(1, circle);
     }
 }

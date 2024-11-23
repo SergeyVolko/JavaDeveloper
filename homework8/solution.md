@@ -1,5 +1,7 @@
 # Домашнее задание №8
 ## Методы и поля классов
+Скриншот компиляции и работы программы:
+![Скриншот1](https://github.com/SergeyVolko/JavaDeveloper/blob/master/homework8/src/com/example/screen/%D0%94%D0%97%E2%84%968.png?raw=true)<br><br>
 Исходный код класса Circle:
 ```java
 package com.example.circle;
@@ -94,20 +96,27 @@ public class TestCircle {
         }
     }
 
-    private void testCreateRadiusLessZero() {
+    private void testCreateRadiusLessZero(double radius) {
         try {
-            Circle circle = new Circle(-1);
-            System.out.println("testCreateRadiusLessZero: FAILURE");
+            Circle circle = new Circle(radius);
+            if (radius < 0) {
+                System.out.println("testCreateRadiusLessZero: FAILURE");
+                return;
+            }
+            System.out.println("testCreateRadiusLessZero: OK");
         } catch (RuntimeException e) {
             System.out.println("testCreateRadiusLessZero: OK");
         }
     }
 
-    private void testSetRadiusLessZero() {
+    private void testSetRadiusLessZero(double radius, Circle circle) {
         try {
-            Circle circle = new Circle(1);
-            circle.setRadius(-1);
-            System.out.println("testSetRadiusLessZero: FAILURE");
+            circle.setRadius(radius);
+            if (radius < 0) {
+                System.out.println("testSetRadiusLessZero: FAILURE");
+                return;
+            }
+            System.out.println("testSetRadiusLessZero: OK");
         } catch (RuntimeException e) {
             System.out.println("testSetRadiusLessZero: OK");
         }
@@ -117,8 +126,11 @@ public class TestCircle {
         testCreateCircle();
         testSetRadius();
         testGetArea();
-        testCreateRadiusLessZero();
-        testSetRadiusLessZero();
+        testCreateRadiusLessZero(-1);
+        testCreateRadiusLessZero(1);
+        Circle circle = new Circle(1);
+        testSetRadiusLessZero(-1, circle);
+        testSetRadiusLessZero(1, circle);
     }
 }
 ```
