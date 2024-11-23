@@ -78,6 +78,6 @@ public class TestCircle {
         testCreateRadiusLessZero(1);
         Circle circle = new Circle(1);
         testSetRadiusLessZero(-1, circle);
-        testSetRadiusLessZero(1, circle);
+        testSetRadiusLessZero(10, circle);
     }
 }

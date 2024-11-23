@@ -629,11 +629,13 @@ public class TestCircle {
 ```
 Вывод в консоль:
 ```
-C:\Users\Lenovo\.jdks\corretto-17.0.13\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJIdea2024.1\lib\idea_rt.jar=50139:C:\Program Files\JetBrains\IntelliJIdea2024.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Lenovo\IdeaProjects\JavaDeveloperProductStar\out\production\homework8 com.example.Main
+C:\Users\Lenovo\.jdks\corretto-17.0.13\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJIdea2024.1\lib\idea_rt.jar=50231:C:\Program Files\JetBrains\IntelliJIdea2024.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Lenovo\IdeaProjects\JavaDeveloperProductStar\out\production\homework8 com.example.Main
 testCreateCircle: OK
 testSetRadius: OK
 testGetArea: OK
 testCreateRadiusLessZero: OK
+testCreateRadiusLessZero: OK
+testSetRadiusLessZero: OK
 testSetRadiusLessZero: OK
 
 Process finished with exit code 0
