@@ -16,6 +16,4 @@ public class Student extends Human {
     public void doTheWork() {
         System.out.println("I'm in college");
     }
-
-
 }

@@ -1,7 +1,7 @@
 package task1;
 
 public class AssociateProfessor extends Human {
-    public String academicDegree;
+    private String academicDegree;
 
     public AssociateProfessor(int age, String name, boolean gender, String academicDegree) {
         super(age, name, gender);
