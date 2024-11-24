@@ -1,7 +1,7 @@
-# Домашнее задание №9
+# Домашнее задание №10
 ## Работа с массивами
 Скриншот сборки программы:
-![Скриншот1](https://github.com/SergeyVolko/JavaDeveloper/blob/master/homework2/src/screen/%D0%94%D0%B7%E2%84%962.png?raw=true)<br><br>
+![Скриншот1](https://github.com/SergeyVolko/JavaDeveloper/blob/master/arrays-homework-main/src/main/java/screen/%D0%94%D0%B7%E2%84%9610.png?raw=true)<br><br>
 Исходный код класса `DefaultCustomArrayList`:
 ```java
 package com.edu;
