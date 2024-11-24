@@ -818,7 +818,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
     }
 }
 ```
-Исходный код класса AccessDeniedException:
+Вывод результата выполнения команды `mvn clean install`:
 ```text
 Microsoft Windows [Version 10.0.19045.5131]
 (c) Microsoft Corporation. All rights reserved.
@@ -878,17 +878,4 @@ C:\Users\Lenovo\IdeaProjects\JavaDeveloperProductStar\arrays-homework-main>mvn c
 [INFO] ------------------------------------------------------------------------
 
 C:\Users\Lenovo\IdeaProjects\JavaDeveloperProductStar\arrays-homework-main>
-```
-Исходный код класса InsufficientAmountException:
-```java
-package exception;
-
-public class InsufficientAmountException extends Exception {
-    public InsufficientAmountException() {
-    }
-
-    public InsufficientAmountException(String message) {
-        super(message);
-    }
-}
 ```
