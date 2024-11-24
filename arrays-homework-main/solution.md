@@ -32,6 +32,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
         if (size == maxCapacity) {
             return false;
         }
+        modCount++;
         if (data.length == size) {
             data = Arrays.copyOf(data, data.length * MULTIPLE_CAPACITY);
         }
@@ -45,6 +46,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
         if (index < 0) {
             return false;
         }
+        modCount++;
         remove(index);
         return true;
     }
@@ -53,6 +55,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
         if (index < 0 || index > size - 1) {
             throw new IndexOutOfBoundsException();
         }
+        modCount++;
         System.arraycopy(data, index + 1, data, index, size - index - 1);
         data[--size] = null;
     }
@@ -76,6 +79,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
     public void clear() {
         this.data = new Object[DEFAULT_CAPACITY];
         this.size = 0;
+        modCount++;
     }
 
     @Override
