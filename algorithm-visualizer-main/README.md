@@ -17,8 +17,8 @@ Sorting Visualizer — это JavaFX приложение для визуали�
 - `src/main/java/com/edu/algorithms`: Директория с реализациями алгоритмов сортировки.
     - **`SortAlgorithm.java`**: Интерфейс для всех алгоритмов сортировки.
         - Подробнее: [SortAlgorithm](src/main/java/com/edu/README.md#sortalgorithm)
-    - **`algorithms.BubbleSort.java`**: Реализация пузырьковой сортировки.
-        - Подробнее: [algorithms.BubbleSort](src/main/java/com/edu/README.md#bubblesort)
+    - **`BubbleSort.java`**: Реализация пузырьковой сортировки.
+        - Подробнее: [BubbleSort](src/main/java/com/edu/README.md#bubblesort)
     - **`InsertionSort.java`**: Реализация сортировки вставками.
         - Подробнее: [InsertionSort](src/main/java/com/edu/README.md#insertionsort)
     - **`QuickSort.java`**: Реализация быстрой сортировки.
@@ -67,7 +67,7 @@ Sorting Visualizer — это JavaFX приложение для визуали�
    Пример:
    ```java
    ComboBox<SortAlgorithm> algorithmSelector = new ComboBox<>();
-   algorithmSelector.getItems().addAll(new algorithms.BubbleSort(), new InsertionSort(), new QuickSort(), new MySortAlgorithm());
+   algorithmSelector.getItems().addAll(new BubbleSort(), new InsertionSort(), new QuickSort(), new MySortAlgorithm());
    ```
 
 3. **Подсветка шагов**:
@@ -97,6 +97,6 @@ Sorting Visualizer — это JavaFX приложение для визуали�
 - **[SortingVisualizerApp](src/main/java/com/edu/README.md#sortingvisualizerapp)**: Подробное описание главного класса приложения.
 - **[Utility](src/main/java/com/edu/README.md#utility)**: Описание утилитарных функций.
 - **[SortAlgorithm](src/main/java/com/edu/algorithms/README.md#sortalgorithm)**: Описание интерфейса для алгоритмов сортировки.
-- **[algorithms.BubbleSort](src/main/java/com/edu/algorithms/README.md#bubblesort)**: Описание реализации пузырьковой сортировки.
+- **[BubbleSort](src/main/java/com/edu/algorithms/README.md#bubblesort)**: Описание реализации пузырьковой сортировки.
 - **[InsertionSort](src/main/java/com/edu/algorithms/README.md#insertionsort)**: Описание реализации сортировки вставками.
 - **[QuickSort](src/main/java/com/edu/algorithms/README.md#quicksort)**: Описание реализации быстрой сортировки.
