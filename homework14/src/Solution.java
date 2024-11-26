@@ -6,6 +6,7 @@ public class Solution {
 
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>(List.of(1, 2, 3, 5));
+        System.out.println("Исходный массив: " + arr);
         IntStream.rangeClosed(0, arr.size() + 1)
                 .forEach((e) -> System.out.println(e +": " + getRollingAverage(arr, e)));
     }
