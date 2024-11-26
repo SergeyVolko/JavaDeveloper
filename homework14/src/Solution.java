@@ -14,13 +14,13 @@ public class Solution {
     public static List<Double> getRollingAverage(ArrayList<Integer> arr, int k) {
         List<Double> list = new ArrayList<>();
         int size = arr.size();
-        if (k <= 0 || k > size) {
+        if (k <= 0) {
             return list;
         }
         for (int i = 0; i <= size - k; i++) {
             int sum = 0;
             int j;
-            for (j = i; j < size && j < k + i ; j++) {
+            for (j = i; j < k + i ; j++) {
                 sum += arr.get(j);
             }
             list.add((double) sum / (j - i));
