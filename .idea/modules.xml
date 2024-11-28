@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/homework1/homework1.iml" filepath="$PROJECT_DIR$/homework1/homework1.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework11/homework11.iml" filepath="$PROJECT_DIR$/homework11/homework11.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework12/homework12.iml" filepath="$PROJECT_DIR$/homework12/homework12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13/homework13.iml" filepath="$PROJECT_DIR$/homework13/homework13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework14/homework14.iml" filepath="$PROJECT_DIR$/homework14/homework14.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework2/homework2.iml" filepath="$PROJECT_DIR$/homework2/homework2.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework3/homework3.iml" filepath="$PROJECT_DIR$/homework3/homework3.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework4/homework4.iml" filepath="$PROJECT_DIR$/homework4/homework4.iml" />
@@ -16,6 +18,8 @@
       <module fileurl="file://$PROJECT_DIR$/homework8/homework8.iml" filepath="$PROJECT_DIR$/homework8/homework8.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework9/homework9.iml" filepath="$PROJECT_DIR$/homework9/homework9.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaOne-master/javaOne-master.iml" filepath="$PROJECT_DIR$/javaOne-master/javaOne-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/playground/playground.iml" filepath="$PROJECT_DIR$/playground/playground.iml" />
+      <module fileurl="file://$PROJECT_DIR$/students/students.iml" filepath="$PROJECT_DIR$/students/students.iml" />
     </modules>
   </component>
 </project>

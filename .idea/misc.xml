@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/arrays-homework-main/pom.xml" />
         <option value="$PROJECT_DIR$/algorithm-visualizer-main/pom.xml" />
+        <option value="$PROJECT_DIR$/warehouse_workshop/pom.xml" />
+        <option value="$PROJECT_DIR$/students/pom.xml" />
       </list>
     </option>
   </component>
