@@ -27,5 +27,11 @@ public class ResultsBoard {
         resultsBoard.students.last();
         System.out.println(resultsBoard.students);
         System.out.println(resultsBoard.top3());
+
+        resultsBoard = new ResultsBoard();
+        resultsBoard.addStudent("Ivan", 3.0f);
+        resultsBoard.addStudent("Maria", 4.0f);
+        resultsBoard.addStudent("Oleg", 4.0f);
+        System.out.println(resultsBoard.top3());
     }
 }

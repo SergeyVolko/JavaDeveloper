@@ -11,21 +11,13 @@ public class Student implements Comparable<Student> {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public float getScore() {
-        return score;
-    }
-
-    public void setScore(float score) {
-        this.score = score;
-    }
-
     @Override
     public int compareTo(Student o) {
-        return Float.compare(score, o.score);
+        int result = Float.compare(score, o.score);
+        if (result == 0) {
+            result = o.name.compareTo(name);
+        }
+        return result;
     }
 
     @Override

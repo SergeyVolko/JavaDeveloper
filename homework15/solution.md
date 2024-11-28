@@ -15,21 +15,13 @@ public class Student implements Comparable<Student> {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public float getScore() {
-        return score;
-    }
-
-    public void setScore(float score) {
-        this.score = score;
-    }
-
     @Override
     public int compareTo(Student o) {
-        return Float.compare(score, o.score);
+        int result = Float.compare(score, o.score);
+        if (result == 0) {
+            result = o.name.compareTo(name);
+        }
+        return result;
     }
 
     @Override
@@ -37,6 +29,7 @@ public class Student implements Comparable<Student> {
         return String.format("[%s %f]", name, score);
     }
 }
+
 ```
 Исходный код класса `ResultsBoard`:
 ```java
@@ -69,15 +62,22 @@ public class ResultsBoard {
         resultsBoard.students.last();
         System.out.println(resultsBoard.students);
         System.out.println(resultsBoard.top3());
+
+        resultsBoard = new ResultsBoard();
+        resultsBoard.addStudent("Ivan", 3.0f);
+        resultsBoard.addStudent("Maria", 4.0f);
+        resultsBoard.addStudent("Oleg", 4.0f);
+        System.out.println(resultsBoard.top3());
     }
 }
 ```
 Вывод в консоль:
 ```
-C:\Users\Lenovo\.jdks\corretto-17.0.13\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJIdea2024.1\lib\idea_rt.jar=50400:C:\Program Files\JetBrains\IntelliJIdea2024.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Lenovo\IdeaProjects\JavaDeveloperProductStar\out\production\homework15 ResultsBoard
+C:\Users\Lenovo\.jdks\corretto-17.0.13\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJIdea2024.1\lib\idea_rt.jar=52710:C:\Program Files\JetBrains\IntelliJIdea2024.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Lenovo\IdeaProjects\JavaDeveloperProductStar\out\production\homework15 ResultsBoard
 [[Igor 2,400000], [Andrew 3,100000], [Ivan 3,200000], [Petr 4,500000], [Sveta 4,900000]]
 [[Igor 2,400000], [Andrew 3,100000], [Ivan 3,200000], [Petr 4,500000], [Sveta 4,900000]]
 [Sveta, Petr, Ivan]
+[Maria, Oleg, Ivan]
 
 Process finished with exit code 0
 ```
