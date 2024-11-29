@@ -12,11 +12,17 @@ public class StudentCommandHandler {
             case UPDATE -> processUpdateStudent(command);
             case DELETE -> processDeleteCommand(command);
             case STATS_BY_COURSE -> processStatsByCourseCommand(command);
+            case SEARCH -> processSearchCommand(command);
             default -> System.out.printf("Действие %s не поддерживается", action.name());
         }
 
         System.out.printf("Обработка команды. Действие: %s, данные: %s\n",
                 command.getAction().name(), command.getData());
+    }
+
+    private void processSearchCommand(Command command) {
+        String surname = command.getData();
+        studentStorage.search(surname);
     }
 
     private void processStatsByCourseCommand(Command command) {

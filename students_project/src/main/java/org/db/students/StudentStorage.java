@@ -2,10 +2,12 @@ package org.db.students;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class StudentStorage {
     private final Map<Long, Student> studentStorageMap = new HashMap<>();
+    private final StudentSurnameStorage studentSurnameStorage = new StudentSurnameStorage();
     private Long currentId = 0L;
 
     /**
@@ -16,6 +18,7 @@ public class StudentStorage {
     public Long createStudent(Student student) {
         Long nextId = getNextId();
         studentStorageMap.put(nextId, student);
+        studentSurnameStorage.studentCreate(nextId, student.getSurname());
         return nextId;
     }
 
@@ -29,6 +32,9 @@ public class StudentStorage {
         if (!studentStorageMap.containsKey(id)) {
             return false;
         }
+        String newSurname = student.getSurname();
+        String oldSurname = studentStorageMap.get(id).getSurname();
+        studentSurnameStorage.studentUpdate(id, oldSurname, newSurname);
         studentStorageMap.put(id, student);
         return true;
     }
@@ -41,7 +47,16 @@ public class StudentStorage {
      */
     public boolean deleteStudent(Long id) {
         Student removed = studentStorageMap.remove(id);
+        if (removed != null) {
+            String surname = removed.getSurname();
+            studentSurnameStorage.studentDeleted(id, surname);
+        }
         return removed != null;
+    }
+
+    public void search(String surname) {
+        studentSurnameStorage.getStudentSurnamesLessOrEqualThan(surname)
+                .forEach(id -> System.out.println(studentStorageMap.get(id)));
     }
 
     public Long getNextId() {
