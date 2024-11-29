@@ -29,10 +29,14 @@ public class Main {
             Action action = Action.fromCode(actionCode);
             if (action.isRequiredAdditionalData()) {
                 String data = scanner.nextLine();
+                DataValidator.dataValidate(action, data);
                 return new Command(action, data);
             } else {
                 return new Command(action);
             }
+        } catch (DataValidateException ex) {
+            System.out.println("Проблема с шаблоном ввода. " + ex.getMessage());
+            return new Command(Action.ERROR);
         } catch (Exception ex) {
             System.out.println("Проблема обработки ввода. " + ex.getMessage());
             return new Command(Action.ERROR);
