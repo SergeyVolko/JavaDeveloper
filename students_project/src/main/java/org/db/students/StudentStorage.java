@@ -3,6 +3,7 @@ package org.db.students;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class StudentStorage {
@@ -72,9 +73,17 @@ public class StudentStorage {
     }
 
     public Map<String, Long> getCountByCourse() {
+        return getCountByFunctionParameter(Student::getCourse);
+    }
+
+    public Map<String, Long> getCountByCity() {
+        return getCountByFunctionParameter(Student::getCity);
+    }
+
+    private Map<String, Long> getCountByFunctionParameter(Function<Student, String> function) {
         return studentStorageMap.values().stream()
                 .collect(Collectors.toMap(
-                        Student::getCourse,
+                        function,
                         v -> 1L,
                         Long::sum
                 ));

@@ -12,6 +12,7 @@ public class StudentCommandHandler {
             case UPDATE -> processUpdateStudent(command);
             case DELETE -> processDeleteCommand(command);
             case STATS_BY_COURSE -> processStatsByCourseCommand(command);
+            case STATS_BY_CITIES -> processStatsByCitiesCommand(command);
             case SEARCH -> processSearchCommand(command);
             default -> System.out.printf("Действие %s не поддерживается", action.name());
         }
@@ -23,6 +24,11 @@ public class StudentCommandHandler {
     private void processSearchCommand(Command command) {
         String surname = command.getData();
         studentStorage.search(surname);
+    }
+
+    private void processStatsByCitiesCommand(Command command) {
+        Map<String, Long> data = studentStorage.getCountByCity();
+        studentStorage.printMap(data);
     }
 
     private void processStatsByCourseCommand(Command command) {
