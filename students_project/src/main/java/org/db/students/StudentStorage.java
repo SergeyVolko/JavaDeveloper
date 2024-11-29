@@ -2,6 +2,7 @@ package org.db.students;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StudentStorage {
     private final Map<Long, Student> studentStorageMap = new HashMap<>();
@@ -49,6 +50,19 @@ public class StudentStorage {
 
     public void printAll() {
         System.out.println(studentStorageMap);
+    }
+
+    public void printMap(Map<String, Long> data) {
+        data.forEach((key, value) -> System.out.println(key + " - " + value));
+    }
+
+    public Map<String, Long> getCountByCourse() {
+        return studentStorageMap.values().stream()
+                .collect(Collectors.toMap(
+                        Student::getCourse,
+                        v -> 1L,
+                        Long::sum
+                ));
     }
 }
 

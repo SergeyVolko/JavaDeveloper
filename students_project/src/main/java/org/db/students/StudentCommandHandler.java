@@ -1,7 +1,9 @@
 package org.db.students;
 
+import java.util.Map;
+
 public class StudentCommandHandler {
-    private StudentStorage studentStorage = new StudentStorage();
+    private final StudentStorage studentStorage = new StudentStorage();
 
     public void processCommand(Command command) {
         Action action = command.getAction();
@@ -9,11 +11,17 @@ public class StudentCommandHandler {
             case CREATE -> processCreateDate(command);
             case UPDATE -> processUpdateStudent(command);
             case DELETE -> processDeleteCommand(command);
+            case STATS_BY_COURSE -> processStatsByCourseCommand(command);
             default -> System.out.printf("Действие %s не поддерживается", action.name());
         }
 
         System.out.printf("Обработка команды. Действие: %s, данные: %s\n",
                 command.getAction().name(), command.getData());
+    }
+
+    private void processStatsByCourseCommand(Command command) {
+        Map<String, Long> data = studentStorage.getCountByCourse();
+        studentStorage.printMap(data);
     }
 
     private void processCreateDate(Command command) {
