@@ -19,5 +19,12 @@ public class DataValidator {
             throw new DataValidateException(String.format("Для действия %s введенные данные не соответствуют шаблону",
                     action));
         }
+        if (Action.SEARCH.equals(action)) {
+            String[] surname = data.split(",");
+            if (surname.length == 2 && surname[0].compareTo(surname[1]) > 0) {
+                throw new DataValidateException(String.format("Для действия %s введенные данные не соответствуют" +
+                                " правильному порядку ввода", action));
+            }
+        }
     }
 }

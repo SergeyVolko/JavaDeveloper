@@ -1,9 +1,6 @@
 package org.db.students;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StudentSurnameStorage {
@@ -30,8 +27,19 @@ public class StudentSurnameStorage {
      * @return set
      */
     public Set<Long> getStudentSurnamesLessOrEqualThan(String surname) {
-        return surnamesTreeMap.headMap(surname, true).values().stream()
+        return getSubMap(surname).values().stream()
                 .flatMap(Collection::stream)
                 .collect(Collectors.toSet());
+    }
+
+    private NavigableMap<String, Set<Long>> getSubMap(String surname) {
+        if (surname.isEmpty()) {
+            return surnamesTreeMap;
+        }
+        String[] surnames = surname.split(",");
+        if (surnames.length == 1) {
+            return surnamesTreeMap.headMap(surname, true);
+        }
+        return surnamesTreeMap.subMap(surnames[0], true, surnames[1], true);
     }
 }
