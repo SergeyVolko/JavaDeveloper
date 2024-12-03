@@ -28,10 +28,14 @@ public class FileUploader {
     public String readFile(String directory, String fileName) throws IOException, EmptyArgumentException {
         validateDataInputFail(directory, fileName);
         File file = new File(directory, fileName);
+        if (!file.exists()) {
+            throw new FileNotFoundException("Такой файл отсутствует");
+        }
         StringBuilder content = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            while (reader.ready()) {
-                content.append(reader.readLine()).append(System.lineSeparator());
+            String line;
+            while ((line = reader.readLine()) != null) {
+                content.append(line).append(System.lineSeparator());
             }
         }
         return content.toString();
@@ -40,13 +44,18 @@ public class FileUploader {
     private boolean isRewritingFile(File file) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Перезаписать файл: y/n");
-        String answer;
-        while (true) {
+        String answer = null;
+        int count = 0;
+        while (count < 3) {
             answer = scanner.nextLine();
             if ("y".equals(answer) || "n".equals(answer)) {
                 break;
             }
             System.out.println("Не верный ввод. Введите: y/n");
+            count++;
+            if (count == 3) {
+                answer = "n";
+            }
         }
         return "y".equals(answer);
 
