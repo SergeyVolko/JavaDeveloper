@@ -7,6 +7,7 @@ public class ClassTrue {
     static void setFinalStatic(Field field, Object newValue) throws Exception {
         field.setAccessible(true);
         Field modifierField = Field.class.getDeclaredField("modifiers");
+
         modifierField.setAccessible(true);
 
         /**
