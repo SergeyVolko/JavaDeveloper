@@ -12,14 +12,22 @@
       <module fileurl="file://$PROJECT_DIR$/homework2/homework2.iml" filepath="$PROJECT_DIR$/homework2/homework2.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework3/homework3.iml" filepath="$PROJECT_DIR$/homework3/homework3.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework4/homework4.iml" filepath="$PROJECT_DIR$/homework4/homework4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework4/homework41.iml" filepath="$PROJECT_DIR$/homework4/homework41.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework5/homework5.iml" filepath="$PROJECT_DIR$/homework5/homework5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework5/homework51.iml" filepath="$PROJECT_DIR$/homework5/homework51.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework6/homework6.iml" filepath="$PROJECT_DIR$/homework6/homework6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework6/homework61.iml" filepath="$PROJECT_DIR$/homework6/homework61.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework7/homework7.iml" filepath="$PROJECT_DIR$/homework7/homework7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework7/homework71.iml" filepath="$PROJECT_DIR$/homework7/homework71.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework8/homework8.iml" filepath="$PROJECT_DIR$/homework8/homework8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework8/homework81.iml" filepath="$PROJECT_DIR$/homework8/homework81.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework9/homework9.iml" filepath="$PROJECT_DIR$/homework9/homework9.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaOne-master/javaOne-master.iml" filepath="$PROJECT_DIR$/javaOne-master/javaOne-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-project/src/main/main.iml" filepath="$PROJECT_DIR$/my-project/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/playground/playground.iml" filepath="$PROJECT_DIR$/playground/playground.iml" />
-      <module fileurl="file://$PROJECT_DIR$/students/students.iml" filepath="$PROJECT_DIR$/students/students.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reflection/reflection.iml" filepath="$PROJECT_DIR$/reflection/reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sport-spring-project.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sport-spring-project.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-project/src/test/test.iml" filepath="$PROJECT_DIR$/my-project/src/test/test.iml" />
     </modules>
   </component>
 </project>
