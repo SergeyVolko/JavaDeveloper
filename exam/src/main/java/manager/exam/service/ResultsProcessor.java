@@ -10,8 +10,6 @@ import java.util.Set;
 
 @Service
 public class ResultsProcessor {
-    private static final String CORRECT_ANSWERS_FILE = "correct-answer.csv";
-    private static final String STUDENT_ANSWERS_FILE = "student-answer.csv";
     private final QuestionNumberScores questionNumberScores;
     private final ReaderCSV readerCSV;
 
@@ -20,9 +18,9 @@ public class ResultsProcessor {
         this.readerCSV = readerCSV;
     }
 
-    public int getTestResults() throws IOException {
-        Path correctFileQuestion = new ClassPathResource(CORRECT_ANSWERS_FILE).getFile().toPath();
-        Path answerFileQuestion = new ClassPathResource(STUDENT_ANSWERS_FILE).getFile().toPath();
+    public int getTestResults(String correctFile, String answerFile) throws IOException {
+        Path correctFileQuestion = new ClassPathResource(correctFile).getFile().toPath();
+        Path answerFileQuestion = new ClassPathResource(answerFile).getFile().toPath();
         Set<Question> correctAnswer = readerCSV.readFromFile(correctFileQuestion);
         Set<Question> studentAnswer = readerCSV.readFromFile(answerFileQuestion);
         return studentAnswer.stream()
