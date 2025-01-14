@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/demo" />
     <file type="web" url="file://$PROJECT_DIR$/sport-spring-project" />
     <file type="web" url="file://$PROJECT_DIR$/spring-lesson" />
   </component>
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/exam/pom.xml" />
         <option value="$PROJECT_DIR$/TestSpring/pom.xml" />
+        <option value="$PROJECT_DIR$/contacts/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
