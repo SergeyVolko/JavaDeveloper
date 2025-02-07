@@ -18,10 +18,12 @@
         <option value="$PROJECT_DIR$/exam/pom.xml" />
         <option value="$PROJECT_DIR$/TestSpring/pom.xml" />
         <option value="$PROJECT_DIR$/contacts/pom.xml" />
+        <option value="$PROJECT_DIR$/PersFinance/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/PersFinance/pom.xml" />
         <option value="$PROJECT_DIR$/TestSpring/pom.xml" />
         <option value="$PROJECT_DIR$/my-project/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />

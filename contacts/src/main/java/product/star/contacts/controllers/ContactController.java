@@ -1,5 +1,6 @@
 package product.star.contacts.controllers;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +21,8 @@ public class ContactController {
     }
 
     @PostMapping
-    public ResponseEntity<ContactDto> add(@RequestBody ContactDto contactDto) {
-        return new ResponseEntity<>(contactFacade.add(contactDto), HttpStatus.OK);
+    public ResponseEntity<ContactDto> add(@Valid  @RequestBody ContactDto contactDto) {
+        return new ResponseEntity<>(contactFacade.add(contactDto), HttpStatus.CREATED);
     }
 
     @GetMapping("/contact/{contactId}")
@@ -37,7 +38,8 @@ public class ContactController {
     }
 
     @PutMapping("/{contactId}")
-    public ResponseEntity<ContactDto> updateContact(@PathVariable long contactId, @RequestBody ContactDto contactDto) {
+    public ResponseEntity<ContactDto> updateContact(@PathVariable long contactId,
+                                                    @Valid @RequestBody ContactDto contactDto) {
         return contactFacade.updateContact(contactId, contactDto)
                 .map(contact -> new ResponseEntity<>(contact, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));

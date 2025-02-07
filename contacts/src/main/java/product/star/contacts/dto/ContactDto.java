@@ -1,15 +1,23 @@
 package product.star.contacts.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import product.star.contacts.models.Contact;
 
 public class ContactDto {
     @JsonProperty("id")
     private long id;
     @JsonProperty("name")
+    @NotBlank(message = "name не должен быть пустым")
     private String name;
+
     @JsonProperty("surname")
+    @NotBlank(message = "surname не должен быть пустым")
     private String surname;
+
+    @Email(message = "Некорректный адрес электронной почты")
+    @NotBlank(message = "Email не должен быть пустым")
     @JsonProperty("email")
     private String email;
 
